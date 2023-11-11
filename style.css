@@ -1,1 +1,127 @@
+body{
+    
+        width: 100%;
+        display: grid;
+            align-content: center;
+            background-color: white;
+             align-items: center;
+             color: #ffffff;
+             align-items: center;
+            
+        
+}
 
+header{
+    background:#272343;
+    flex-wrap: wrap;
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0px;
+    padding-bottom: 5px ;
+    text-align: center;
+    display: flex;
+    
+    top: 0px;
+    color: #ffffff;
+   justify-content: space-around; 
+   
+}
+#cont{
+
+
+    width: 100%;
+    display: grid;
+        place-self: center;
+        align-content: center;
+        background-color: white;
+         align-items: center;
+         color: #ffffff;
+         align-items: center;
+        
+}
+#welcome{ 
+
+    margin-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+     height: 100%;
+     box-shadow: 3px #272343;
+     border-radius: 5px;
+    width: 60%;
+    display: grid;
+    font-size: 180%;
+    text-align: center;
+    place-self: center;
+        align-content: center;
+        background-color: white;
+         align-items: center;
+         color: black;
+         align-items: center;
+         border-radius: 10px;
+    box-shadow: 10px 15px 35px #272343;
+    
+}
+#start{
+    place-self: center;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width :30%;
+    border-radius: 10px;
+    
+
+}
+#start:hover{
+    color: #ffffff;
+    background: #272343;
+}
+
+#quiz{
+    width: 100%;
+    height: 100%;
+    display: grid;
+        place-self: center;
+        align-content: center;
+        background-color: white;
+         align-items: center;
+         color: black;
+         align-items: center;   
+         display: none;
+}
+
+#buttons{
+    place-self: center;
+    display: flex;
+     justify-content: space-between;
+     
+     height: 40px;
+     width: 80%;
+}
+#question{
+    padding-top: 15px;
+    place-self: center;
+    text-align: center;
+    color: black;
+    height: 90%;
+    width: 70%;
+    
+}
+#answers{
+
+    display: grid;
+    padding-top: 15px;
+    place-self: center ;
+    padding-bottom: 10px;
+    place-content: center;
+
+    row-gap: 10px;
+    width: 100%;
+    
+}
+
+
+.Btn:hover{
+    box-shadow: 10px 15px 35px #272343;
+}
