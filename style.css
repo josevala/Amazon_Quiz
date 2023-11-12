@@ -43,7 +43,7 @@ header{
 }
 #welcome{ 
 
-    margin-top: 60px;
+    margin-top: 30px;
     padding-left: 20px;
     padding-right: 20px;
      height: 100%;
@@ -79,6 +79,7 @@ header{
 }
 
 #quiz{
+
     width: 100%;
     height: 100%;
     display: grid;
@@ -93,13 +94,13 @@ header{
 
 #buttons{
     place-self: center;
-    display: flex;
-     justify-content: space-between;
+    
      
      height: 40px;
      width: 80%;
 }
 #question{
+    font-size: 30px;
     padding-top: 15px;
     place-self: center;
     text-align: center;
@@ -115,13 +116,28 @@ header{
     place-self: center ;
     padding-bottom: 10px;
     place-content: center;
-
+    
     row-gap: 10px;
     width: 100%;
     
 }
-
+.Btn{
+    font-size: 20px;
+}
 
 .Btn:hover{
     box-shadow: 10px 15px 35px #272343;
+}
+#buttons{
+    display: grid;
+}
+#buttons button{
+    width: 15%;
+}
+#perv{
+    display: none;
+}
+#buttons button:hover{
+    box-shadow: 10px 15px 35px #272343;
+
 }
