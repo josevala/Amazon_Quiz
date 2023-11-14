@@ -116,13 +116,14 @@ header{
     place-self: center ;
     padding-bottom: 10px;
     place-content: center;
-    
+    color: black;
     row-gap: 10px;
     width: 100%;
     
 }
 .Btn{
     font-size: 20px;
+    color: black;
 }
 
 .Btn:hover{

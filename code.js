@@ -113,6 +113,7 @@ function display(Obj){
 
 
           if(selAns != `${Obj.correctAnswer}`){
+            answerCont.append(message)
             btn.style.border= '7px solid red'
             message.style.border= '7px solid red'
                 message.innerHTML = 'Incorrect! <br> <br><u>Click here</u><br>to try again!'
@@ -141,7 +142,7 @@ function display(Obj){
             message.innerHTML = 'Correct<br> Good Job!<br><br><u>Click next</u><br> to continue!'
             message.style.display= 'block'
             
-            QuizCont.append(message)
+            answerCont.append(message)
             
             message.addEventListener('click',()=>{
                        message.style.display = 'none'
