@@ -65,6 +65,22 @@ let start = document.getElementById('start')
         WelCont.style.display = 'none'
        
  })
+ let message = document.createElement('div')
+ message.classList.add('message')
+ message.style.background = '#272343'
+ message.style.position = 'absolute'
+ message.style.placeSelf = 'center'
+ message.style.color = 'white'
+ message.style.width = '50%'
+ message.style.height = "50%"
+ 
+ message.style.fontSize = "40px"
+ message.style.textAlign = "center"
+ message.style.placeContent = 'center'
+ message.style.paddingTop = '30px'
+ message.style.borderRadius = '10px'
+ message.style.display = 'none'
+
  
 let score =0 ;
 
@@ -93,67 +109,57 @@ function display(Obj){
         selAns = btn.innerText
         console.log(`${Obj.correctAnswer}`.trim(' '))
         console.log(`${selAns}`.trim(' '))
+           answerCont.append(message)
+
+
           if(selAns != `${Obj.correctAnswer}`){
             btn.style.border= '7px solid red'
-                let message = document.createElement('div')
-                message.classList.add('message')
-                message.innerHTML = 'Incorrect! <br> Please try again<br>Click here to try again!'
-                message.style.background = '#272343'
-                message.style.position = 'absolute'
-                message.style.placeSelf = 'center'
-                message.style.color = 'white'
-                message.style.width = '40%'
-                message.style.height = "40%"
-                message.style.fontSize = "50px"
-                message.style.textAlign = "center"
-                message.style.placeContent = 'center'
-                message.style.paddingTop = '30px'
-                message.style.borderRadius = '10px'
+            message.style.border= '7px solid red'
+                message.innerHTML = 'Incorrect! <br> <br><u>Click here</u><br>to try again!'
+               message.style.display = 'block'
+               
+              
+               
                 next.addEventListener('click',()=>{
                     message.style.display = 'none'
+                    
+
+
          })
       
                 message.addEventListener('click',()=>{
                            message.style.display = 'none'
+                           
+
+                           
                 })
-                btn.addEventListener('click',()=>{
-                    message.style.display = 'none'})
-                QuizCont.append(message)
+                
+                
 
       
           }else if(selAns == `${Obj.correctAnswer}`){
-            let message = document.createElement('div')
-            message.classList.add('message')
-            message.innerHTML = 'Correct<br> Good Job!<br>Click next to continue!'
-            message.style.background = '#272343'
-            message.style.position = 'absolute'
-            message.style.placeSelf = 'center'
-            message.style.color = 'white'
-            message.style.width = '40%'
-            message.style.height = "40%"
-            message.style.fontSize = "50px"
-            message.style.textAlign = "center"
-            message.style.placeContent = 'center'
-            message.style.paddingTop = '30px'
-            message.style.borderRadius = '10px'
+            message.innerHTML = 'Correct<br> Good Job!<br><br><u>Click next</u><br> to continue!'
+            message.style.display= 'block'
+            
+            QuizCont.append(message)
+            
             message.addEventListener('click',()=>{
                        message.style.display = 'none'
-            })
+                       })
             btn.addEventListener('click',()=>{
                 message.style.display = 'none'})
-            QuizCont.append(message)
+            
              next.addEventListener('click',()=>{
                 message.style.display = 'none'
-     })
-    
+             })
+            message.style.border = ' 7px solid green'
             next.style.display = 'block'
+            next.style.width = '40%'
             next.style.placeSelf = 'center'
             next.style.textAlign = 'center'
             btn.style.border = " 7px solid green"
           }
-        
-        
-       })
+         })
         
         
     });
@@ -195,7 +201,10 @@ next.addEventListener('click',()=>{
         for(let i =0; i<= 5; i++){
             answerCont.removeChild(answerCont.firstElementChild)
         }
-           questCont.innerHTML = 'Great Job!'
+           questCont.innerHTML = 'Great Job<br> <u>Restart Quiz</u>'
+           questCont.addEventListener('click',()=>{
+            location.reload();
+           })
            questCont.style.fontSize = '40px'
            let logoI= document.createElement('img')
            logoI.classList.add('myImg')
@@ -206,7 +215,7 @@ next.addEventListener('click',()=>{
            answerCont.style.marginBottom = '0'
            answerCont.style.paddingBottom = '5px'
            next.style.display = 'none'
-           prev.style.display = 'none'
+          
     }
 })
 

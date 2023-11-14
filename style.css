@@ -133,11 +133,27 @@ header{
 }
 #buttons button{
     width: 15%;
+    height: 95%;
 }
 #perv{
     display: none;
 }
 #buttons button:hover{
     box-shadow: 10px 15px 35px #272343;
+
+}
+
+@media only screen and (max-width:500px) {
+    
+ #welcome{
+    font-size: 18px;
+ }
+ #start{
+    font-size: 15px;
+ }
+ .message{
+    font-size: 10px;
+    width: 90%;
+ }
 
 }
