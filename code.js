@@ -157,6 +157,7 @@ function display(Obj){
             next.style.display = 'block'
             next.style.width = '40%'
             next.style.placeSelf = 'center'
+            next.style.borderRadius = '10px'
             next.style.textAlign = 'center'
             btn.style.border = " 7px solid green"
           }
